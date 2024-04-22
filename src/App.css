@@ -1,38 +1,80 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header {
+  padding: 20px;
+  border-bottom: 2px solid #ccc; /* Puedes ajustar el color del borde según tus preferencias */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Puedes ajustar la sombra según tus preferencias */
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-top: 20px;
+}
+
+/* Estilos adicionales según tus preferencias */
+/* Modo claro (predeterminado) */
+.App.light-mode {
+  background-color: #fff;
+  color: #000;
+}
+
+.App.light-mode .circle {
+  background-color: #fff;
+  border: 2px solid #282c34;
+}
+
+/* Modo oscuro */
+.App.dark-mode {
+  background-color: #282c34;
+  color: #fff;
+}
+
+.App.dark-mode .circle {
+  background-color: #282c34;
+  border: 2px solid #fff;
+}
+
+/* Estilos adicionales para los botones u otros elementos según tus preferencias */
+/* Estilos para el modo oscuro */
+.dark-mode .App-header {
+  background-color: #333; /* Puedes ajustar el color según tus preferencias */
+  border-bottom: 2px solid #555; /* Puedes ajustar el color del borde según tus preferencias */
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1); /* Puedes ajustar la sombra según tus preferencias */
+  padding: 10px; /* Puedes ajustar el espacio interno según tus preferencias */
+  color: white; /* Puedes ajustar el color del texto según tus preferencias */
+}
+
+.light-mode .App-header {
+  background-color: #f0f0f0; /* Puedes ajustar el color según tus preferencias */
+  border-bottom: 2px solid #ccc; /* Puedes ajustar el color del borde según tus preferencias */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Puedes ajustar la sombra según tus preferencias */
+  padding: 10px; /* Puedes ajustar el espacio interno según tus preferencias */
 }
