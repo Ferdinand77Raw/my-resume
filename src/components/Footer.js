@@ -72,7 +72,7 @@ function FooterComponent() {
                 </TransparentButton>
             </ContactButtonsContainer>
             <FooterBottom>
-                <p>© 2023 Fernando Gastón Pavón. Todos los derechos reservados.</p>
+                <p>© 2024 Fernando Gastón Pavón. Todos los derechos reservados.</p>
             </FooterBottom>
         </div>
     );

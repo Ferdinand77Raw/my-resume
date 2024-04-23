@@ -1,0 +1,22 @@
+{
+    "navbar": "Experiencia",
+    "navbar1": "Habilidades",
+    "navbar2": "Syncstark",
+    "navbar3": "Otros desarrollos",
+    "position": "Desarrollador FullStack",
+    "description": "Soy un desarrollador web y móvil con experiencia en diversas tecnologías y herramientas. Dirigí el desarrollo completo de soluciones web utilizando PHP, MySQL y JavaScript implementando características innovadoras. Gestioné servidores NginX para un rendimiento óptimo, lideré la creación de extensiones de soluciones y desarrollé aplicaciones móviles con Flutter. Implementé la optimización y mantenimiento continuo del sistema para garantizar estabilidad, corrección de errores y seguridad.",
+    "skills": "Mis habilidades: ",
+    "bbdd": "Bases de datos",
+    "sistemas": "Sistemas Operativos",
+    "otras_herramientas": "Otras Herramientas",
+    "footer": "© 2024 Fernando Gastón Pavón. Todos los derechos reservados.",
+    "project0": "Desarrollos en Syncstark",
+    "project1" : "Chat en tiempo real basado en el plugin de websocket de Ratchet",
+    "project2" : "Herramienta de autocompletado para formularios específicos",
+    "project3" : "Herramienta para búsqueda inversa de personas a través del teléfono",
+    "project4" : "Aplicacion móvil tanto para Android como iOS para confirmar la visita de los técnicos por orden de trabajo",
+    "project5" : "Chat room general hecho en Laravel y React",
+    "project6" : "Herramienta para medir la performance de una pagina",
+    "project7" : "Calculadora de gastos e ingresos",
+    "project8" : "Red social para fotos"
+}

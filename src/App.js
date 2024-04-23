@@ -12,6 +12,8 @@ import SkillsSector from './components/SkillsSector';
 import FooterComponent from './components/Footer';
 import Projects from './components/Projects';
 
+import LanguageSelector from './context/LanguageSelector';
+import { LanguageProvider } from './context/LanguageContext';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -84,35 +86,38 @@ function App() {
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
-      <header className={`App-header ${darkMode ? 'dark-mode' : 'light-mode'}`}>
-        <nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <SwitchContainer>
-          <FormControlLabel
-            control={
-              <MaterialUISwitch
-                sx={{ marginLeft: 130 }}
-                checked={darkMode}
-                onChange={toggleDarkMode}
+      <LanguageProvider>
+        <header className={`App-header ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+          <nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <SwitchContainer>
+              <FormControlLabel
+                control={
+                  <MaterialUISwitch
+                    sx={{ marginLeft: 130 }}
+                    checked={darkMode}
+                    onChange={toggleDarkMode}
+                  />
+                }
               />
-            }
-          />
-        </SwitchContainer>
-          <ul style={{ listStyleType: 'none', padding: '0', margin: '0', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-            <li style={{ marginRight: '30px' }}><a href="#profile" style={{ color: 'black', textDecoration: 'none' }}>Experiencia</a></li>
-            <li style={{ marginRight: '20px' }}><a href="#skills" style={{ color: 'black', textDecoration: 'none' }}>Habilidades</a></li>
-            <li style={{ marginRight: '20px' }}><a href="#projects" style={{ color: 'black', textDecoration: 'none' }}>Syncstark</a></li>
-            <li><a href="#otros" style={{ color: 'black', textDecoration: 'none' }}>Otros desarrollos</a></li>
-          </ul>
-        </nav>
-      </header>
-      <CenteredContainer>
-      <ProfilePic />
-      </CenteredContainer>  
-      <Description />
-      <SkillsSector />   
-      <Projects /> 
-      <br/>
-      <FooterComponent />
+            </SwitchContainer>
+            <LanguageSelector />
+            <ul style={{ listStyleType: 'none', padding: '0', margin: '0', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+              <li style={{ marginRight: '30px' }}><a href="#profile" style={{ color: 'black', textDecoration: 'none' }}>Experiencia</a></li>
+              <li style={{ marginRight: '20px' }}><a href="#skills" style={{ color: 'black', textDecoration: 'none' }}>Habilidades</a></li>
+              <li style={{ marginRight: '20px' }}><a href="#projects" style={{ color: 'black', textDecoration: 'none' }}>Syncstark</a></li>
+              <li><a href="#otros" style={{ color: 'black', textDecoration: 'none' }}>Otros desarrollos</a></li>
+            </ul>
+          </nav>
+        </header>
+        <CenteredContainer>
+          <ProfilePic />
+        </CenteredContainer>
+        <Description />
+        <SkillsSector />
+        <Projects />
+        <br />
+        <FooterComponent />
+      </LanguageProvider>
     </div>
   );
 }
