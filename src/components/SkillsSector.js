@@ -7,9 +7,12 @@ import sistemasOperativos from '../assets/img/SOs.png';
 import mobileView from '../assets/img/mobile.png';
 import extraTools from '../assets/img/otras_herramientas.png';
 import { css, styled } from '@mui/material/styles';
+import { useLanguage } from "../context/LanguageContext";
 
 function SkillsSector()
 {
+  const { texts } = useLanguage();
+
     const SkillsContainer = styled('div')({
         display: 'flex',
         flexDirection: 'row',
@@ -41,11 +44,11 @@ function SkillsSector()
             <SkillsListItem><img src={backEnd} width='70%' alt='Back End Stack'></img></SkillsListItem>
           </SkillsList>
           <SkillsList>
-            <SkillsListItem><b>Bases de Datos</b></SkillsListItem>
+            <SkillsListItem><b>{texts.bbdd}</b></SkillsListItem>
             <SkillsListItem><img src={basesDeDatos} width='70%' alt='Database stack'></img></SkillsListItem>
           </SkillsList>
           <SkillsList>
-            <SkillsListItem><b>Sistemas Operativos</b></SkillsListItem>
+            <SkillsListItem><b>{texts.os}</b></SkillsListItem>
             <SkillsListItem><img src={sistemasOperativos} width='70%' alt='SO stack'></img></SkillsListItem>
           </SkillsList>
           <SkillsList>
@@ -53,7 +56,7 @@ function SkillsSector()
             <SkillsListItem><img src={mobileView} width='70%' alt='Mobile Stack'></img></SkillsListItem>
           </SkillsList>
           <SkillsList>
-            <SkillsListItem><b>Otras herramientas</b></SkillsListItem>
+            <SkillsListItem><b>{texts.other_tools}</b></SkillsListItem>
             <SkillsListItem><img src={extraTools} width='70%' alt='Extra tools'></img></SkillsListItem>
           </SkillsList>
         </SkillsContainer>

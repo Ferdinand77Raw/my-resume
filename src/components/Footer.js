@@ -3,8 +3,11 @@ import { css, styled } from '@mui/material/styles';
 import emailIcon from '../assets/img/mail_icon.png';
 import whatsappIcon from '../assets/img/wpp_icon.png';
 import linkedinIcon from '../assets/img/linkedin_icon.png';
+import { useLanguage } from "../context/LanguageContext";
 
 function FooterComponent() {
+  const { texts } = useLanguage();
+
     const FooterBottom = styled('footer')({
         marginTop: '20px', // Espacio entre el contenido y el pie de página
         padding: '10px',
@@ -72,7 +75,7 @@ function FooterComponent() {
                 </TransparentButton>
             </ContactButtonsContainer>
             <FooterBottom>
-                <p>© 2024 Fernando Gastón Pavón. Todos los derechos reservados.</p>
+                <p>{texts.footer}</p>
             </FooterBottom>
         </div>
     );

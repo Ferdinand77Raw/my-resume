@@ -1,19 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
 import './App.css';
-
 import { css, styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-
 import ProfilePic from './components/ProfilePic';
 import Description from './components/Description';
 import SkillsSector from './components/SkillsSector';
 import FooterComponent from './components/Footer';
 import Projects from './components/Projects';
-
 import LanguageSelector from './context/LanguageSelector';
 import { LanguageProvider } from './context/LanguageContext';
+import NavBar from './components/NavBar';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -101,12 +99,7 @@ function App() {
               />
             </SwitchContainer>
             <LanguageSelector />
-            <ul style={{ listStyleType: 'none', padding: '0', margin: '0', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-              <li style={{ marginRight: '30px' }}><a href="#profile" style={{ color: 'black', textDecoration: 'none' }}>Experiencia</a></li>
-              <li style={{ marginRight: '20px' }}><a href="#skills" style={{ color: 'black', textDecoration: 'none' }}>Habilidades</a></li>
-              <li style={{ marginRight: '20px' }}><a href="#projects" style={{ color: 'black', textDecoration: 'none' }}>Syncstark</a></li>
-              <li><a href="#otros" style={{ color: 'black', textDecoration: 'none' }}>Otros desarrollos</a></li>
-            </ul>
+            <NavBar></NavBar>
           </nav>
         </header>
         <CenteredContainer>

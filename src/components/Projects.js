@@ -14,19 +14,22 @@ import chat_room2 from '../assets/img/ChatRoom2.png';
 import metrics from '../assets/img/MetricsHub.png';
 import metrics2 from '../assets/img/MetricsHub2.png';
 import metrics3 from '../assets/img/MetricsHub3.png';
+import { useLanguage } from "../context/LanguageContext";
 
 function Projects() {
+  const { texts } = useLanguage();
+
   return (
     <div id="projects">
       <section id='desarrollos'>
-        <h1>Desarrollos en Syncstark</h1>
+        <h1>{texts.project0}</h1>
       </section>
 
       <section>
         <a href="https://github.com/Ferdinand77Raw/Rooms" target="new">
           <img src={room_chat} alt="Miniatura chat" style={{ width: '300px', borderRadius: '15px' }} />
         </a>
-        <p>Chat en tiempo real basado en el plugin de websocket de Ratchet</p>
+        <p>{texts.project1}</p>
       </section>
 
       <div style={{ width: '50%', margin: '0 auto' }}>
@@ -42,7 +45,7 @@ function Projects() {
             <img src={complement_img1} alt="Miniatura del Sitio Web 2" style={{ maxWidth: '250px', borderRadius: '15px' }} />
           </a>
         </div>
-        <p>Herramienta de autocompletado para formularios específicos</p>
+        <p>{texts.project2}</p>
       </section>
 
       <div style={{ width: '50%', margin: '0 auto' }}>
@@ -53,7 +56,7 @@ function Projects() {
         <a href='https://github.com/Ferdinand77Raw/plugin-search-mycrm' target='new' style={{ marginLeft: '20px', marginRight: '20px' }}>
           <img src={crmplugin} alt='crm-plugin' style={{ maxWidth: '300px', borderRadius: '15px' }} />
         </a>
-        <p>Herramienta para búsqueda inversa de personas a través del teléfono</p>
+        <p>{texts.project3}</p>
         <section>
         </section>
 
@@ -68,7 +71,7 @@ function Projects() {
         </a>
         <img src={mobile_2} alt="Captura de la Aplicación Móvil 2" style={{ maxWidth: '200px', marginLeft: '10px' }} />
         <img src={mobile_3} alt="Captura de la aplicacion Movil 3" style={{ maxWidth: '200px', marginLeft: '10px' }} />
-        <p>Aplicacion móvil tanto para Android como iOS para confirmar la visita de los técnicos por orden de trabajo</p>
+        <p>{texts.project4}</p>
       </section>
 
       <div style={{ width: '80%', margin: '0 auto' }}>
@@ -78,7 +81,7 @@ function Projects() {
       <div id="otros">
 
         <section id='otros'>
-          <h2>Otros desarrollos</h2>
+          <h2>{texts.oth_dev}</h2>
         </section>
 
         <section>
@@ -88,7 +91,7 @@ function Projects() {
           <a href="https://github.com/Ferdinand77Raw/chatroom" target="new">
             <img src={chat_room2} alt="Chat" style={{ maxWidth: 300, marginLeft: 10, borderRadius: 15 }} />
           </a>
-          <p>Chat room general hecho en Laravel y React</p>
+          <p>{texts.project5}</p>
         </section>
 
         <div style={{ width: '50%', margin: '0 auto' }}>
@@ -105,7 +108,7 @@ function Projects() {
           <a>
             <img src={metrics3} width={300} style={{ maxWidth: 350, marginLeft: 10, borderRadius: 15 }} />
           </a>
-          <p>Herramienta para medir la performance de una pagina</p>
+          <p>{texts.project6}</p>
         </section>
 
         <div style={{ width: '50%', margin: '0 auto' }}>
@@ -119,7 +122,7 @@ function Projects() {
           <a href="https://github.com/Ferdinand77Raw/presupuesto" target='new' style={{ marginRight: '20px' }}>
             <img src={calculator2} alt='calculator' style={{ maxWidth: '350px', borderRadius: 15 }} />
           </a>
-          <p>Calculadora de gastos e ingresos</p>
+          <p>{texts.project7}</p>
         </section>
 
         <div style={{ width: '50%', margin: '0 auto' }}>
@@ -130,7 +133,7 @@ function Projects() {
           <a href='https://instagramfake-b88c9.web.app/' target='new' style={{ marginLeft: '20px' }}>
             <img src={social_media} alt='social_media' style={{ maxWidth: '350px', borderRadius: 15 }} />
           </a>
-          <p>Red social para fotos</p>
+          <p>{texts.project8}</p>
         </section>
       </div>
 
