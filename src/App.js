@@ -98,10 +98,10 @@ function App() {
           />
         </SwitchContainer>
           <ul style={{ listStyleType: 'none', padding: '0', margin: '0', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-            <li style={{ marginRight: '30px' }}><a href="#experiencia">Experiencia</a></li>
-            <li style={{ marginRight: '20px' }}><a href="#habilidades">Habilidades</a></li>
-            <li style={{ marginRight: '20px' }}><a href="#desarrollos">Syncstark</a></li>
-            <li><a href="#otros">Otros desarrollos</a></li>
+            <li style={{ marginRight: '30px' }}><a href="#profile" style={{ color: 'black', textDecoration: 'none' }}>Experiencia</a></li>
+            <li style={{ marginRight: '20px' }}><a href="#skills" style={{ color: 'black', textDecoration: 'none' }}>Habilidades</a></li>
+            <li style={{ marginRight: '20px' }}><a href="#projects" style={{ color: 'black', textDecoration: 'none' }}>Syncstark</a></li>
+            <li><a href="#otros" style={{ color: 'black', textDecoration: 'none' }}>Otros desarrollos</a></li>
           </ul>
         </nav>
       </header>

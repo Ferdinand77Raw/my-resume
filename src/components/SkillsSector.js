@@ -30,6 +30,7 @@ function SkillsSector()
       });
 
     return(
+      <div id="skills">
         <SkillsContainer>
           <SkillsList>
             <SkillsListItem><b>Front End</b></SkillsListItem>
@@ -56,6 +57,7 @@ function SkillsSector()
             <SkillsListItem><img src={extraTools} width='70%' alt='Extra tools'></img></SkillsListItem>
           </SkillsList>
         </SkillsContainer>
+      </div>
     );
 }
 
