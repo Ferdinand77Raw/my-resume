@@ -36,7 +36,7 @@ const Hr = styled('hr')({
 
 const ImageLink = styled('a')({
   maxWidth: '300px',
-  marginRight: '10px',
+  margin: '10px',
   borderRadius: '15px',
 });
 
@@ -52,7 +52,6 @@ const Image = styled('img')({
 
 const ImageContainer = styled('div')({
   display: 'flex',
-  padding: 5,
   justifyContent: 'center',
   alignItems: 'center',
   gap: '20px',

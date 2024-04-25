@@ -10,6 +10,8 @@ function FooterComponent() {
   const { texts, language } = useLanguage(); // Obtener el idioma del contexto
 
   const FooterBottom = styled('footer')({
+    display: 'flex',
+    flexDirection: 'row',
     marginTop: '20px', // Espacio entre el contenido y el pie de página
     padding: '10px',
     backgroundColor: '#333', // Puedes ajustar el color de fondo según tus preferencias
@@ -40,8 +42,10 @@ function FooterComponent() {
 
   const ContactButtonsContainer = styled('div')({
     display: 'flex',
+    flexDirection: 'row', // Cambia a una columna en pantallas pequeñas
     gap: '10px', // Espacio entre los botones
-    marginBottom: '10px'
+    marginBottom: '10px',
+    textAlign: 'center',
   });
 
   const TransparentButton = styled('button')({
@@ -64,9 +68,8 @@ function FooterComponent() {
     maxWidth: '30px',
     borderRadius: '15px',
     '@media screen and (max-width: 768px)': {
-      maxWidth: '200px',
-      flexDirection: 'column',
-      textAlign: 'center',
+      maxWidth: '20px', // Ajusta el tamaño de los íconos para pantallas más pequeñas
+      marginBottom: '5px' // Ajusta el espacio entre los íconos para pantallas más pequeñas
     },
   });
 

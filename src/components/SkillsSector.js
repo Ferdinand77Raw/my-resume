@@ -24,23 +24,25 @@ function SkillsSector()
         padding: 0,
         margin: 0,
         textAlign: 'left',
-        marginRight: '50px', // Ajusta según sea necesario
+        marginRight: '50px',
         '@media (max-width: 768px)': {
-          marginRight: '0', // Reduce el margen en pantallas pequeñas
+          marginRight: '0',
         },
       });
     
       const SkillsListItem = styled('li')({
-        marginBottom: '5px', // Ajusta según sea necesario
+        marginBottom: '5px',
         '@media (max-width: 768px)': {
-          marginBottom: '10px', // Ajusta el margen inferior en pantallas pequeñas
+          marginBottom: '10px',
+          fontSize: '10px',
+          textAlign: 'center'
         },
       });
 
       const Image = styled('img')({
         width: '70%',
         '@media (max-width: 768px)': {
-          width: '100%', // Hace que la imagen ocupe todo el ancho en pantallas pequeñas
+          width: '100%',
         },
       });
 
