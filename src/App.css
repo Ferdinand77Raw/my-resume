@@ -25,20 +25,6 @@
   object-fit: cover;
   border-radius: 50%;
 }
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-p {
-  margin-top: 20px;
-}
-
 /* Estilos adicionales según tus preferencias */
 /* Modo claro (predeterminado) */
 .App.light-mode {

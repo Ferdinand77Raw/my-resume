@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './App.css';
-import { css, styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import ProfilePic from './components/ProfilePic';
@@ -24,6 +24,7 @@ function App() {
     width: 62,
     height: 34,
     padding: 7,
+    transition: 'background-color 0.5s ease 0.5s',
     '& .MuiSwitch-switchBase': {
       margin: 1,
       padding: 0,
@@ -81,17 +82,30 @@ function App() {
     marginLeft: '10px', // Ajusta el valor según sea necesario
   });
 
+  const NavUl = styled('ul')({
+    display: 'flex',
+    margin: 0,
+    padding: 0,
+    justifyContent: 'end',
+    listStyleType: 'none',
+    flexDirection: 'row',
+    alignItems: 'center',
+    '@media screen and (max-width: 768px)': {
+        flexDirection: 'column', // Cambiar a columna en pantallas pequeñas
+        textAlign: 'center', // Centrar los elementos en pantallas pequeñas
+    },
+});
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
       <LanguageProvider>
         <header className={`App-header ${darkMode ? 'dark-mode' : 'light-mode'}`}>
-          <nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <NavUl>
             <SwitchContainer>
               <FormControlLabel
                 control={
                   <MaterialUISwitch
-                    sx={{ marginLeft: 130 }}
+                    
                     checked={darkMode}
                     onChange={toggleDarkMode}
                   />
@@ -100,7 +114,7 @@ function App() {
             </SwitchContainer>
             <LanguageSelector />
             <NavBar></NavBar>
-          </nav>
+          </NavUl>
         </header>
         <CenteredContainer>
           <ProfilePic />
