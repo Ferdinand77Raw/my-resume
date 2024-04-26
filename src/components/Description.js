@@ -31,12 +31,14 @@ function Description() {
 
     const ButtonContainer = styled('button')({
         width: '120px',
+        color: '#ffff',
         height: '30px',
         borderRadius: '15px',
         backgroundColor: '#0891B2',
+        cursor: 'pointer'
     });
 
-    const Anchorage = styled('a')(({ theme }) => ({
+    const Anchorage = styled('a')(() => ({
         color: "#ffff", // Usar el color de texto del tema
         fontWeight: 'bold',
         textDecoration: 'none',
@@ -51,11 +53,11 @@ function Description() {
 
     return (
         <div>
-            <ButtonContainer>
-                <Anchorage id="cvs" href={cvPath} download>
+            <Anchorage id="cvs" href={cvPath} download>
+                <ButtonContainer>
                     {language === 'es' ? 'Descargar CV' : 'Download CV'}
-                </Anchorage>
-            </ButtonContainer>
+                </ButtonContainer>
+            </Anchorage>
             <H1Component>Fernando Gastón Pavón</H1Component>
             <H2Component>{texts.position}</H2Component>
             <H4Component>
