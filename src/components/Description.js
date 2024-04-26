@@ -45,7 +45,7 @@ function Description() {
         },
     }));
 
-    const cvPath = language === 'es' ? '../assets/cv/FernandoPavonCV2024_Esp.pdf' : '../assets/cv/FernandoPavonCV2024_Eng.pdf';
+    const cvPath = language === 'es' ? '/assets/cv/FernandoPavonCV2024_Esp.pdf' : '/assets/cv/FernandoPavonCV2024_Eng.pdf';
 
     const { texts } = useLanguage();
 
