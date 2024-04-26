@@ -3,7 +3,7 @@ import { useLanguage } from '../context/LanguageContext.js';
 import { styled } from "@mui/material/styles";
 
 function NavBar() {
-    
+
     const NavUl = styled('ul')({
         display: 'flex',
         margin: 0,
@@ -16,7 +16,7 @@ function NavBar() {
             textAlign: 'center', // Centrar los elementos en pantallas pequeñas
         },
     });
-    
+
     const NavLi = styled('li')({
         marginRight: 30,
         '@media screen and (max-width: 768px)': {

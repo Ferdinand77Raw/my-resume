@@ -7,7 +7,7 @@ import gitHub from '../assets/img/GitHub_logo.png';
 import { useLanguage } from "../context/LanguageContext";
 
 function FooterComponent() {
-  const { texts, language } = useLanguage(); // Obtener el idioma del contexto
+  const { texts } = useLanguage(); // Obtener el idioma del contexto
 
   const FooterBottom = styled('footer')({
     display: 'flex',
@@ -73,19 +73,6 @@ function FooterComponent() {
     },
   });
 
-      // Estilo para el componente de enlace
-  const Anchorage = styled('a')(({ theme }) => ({
-        color: theme.palette.text.primary, // Usar el color de texto del tema
-        backgroundColor: '#ffff',
-        borderRadius: '15px',
-        textDecoration: 'none',
-        '&:hover': {
-            textDecoration: 'underline', // Subrayar al pasar el mouse
-        },
-    }));
-
-  const cvPath = language === 'es' ? '../assets/cv/FernandoPavonCV2024_Esp.pdf' : '../assets/cv/FernandoPavonCV2024_Eng.pdf';
-
   return (
     <div>
       <ContactButtonsContainer>
@@ -102,10 +89,6 @@ function FooterComponent() {
           <Image src={gitHub} alt="github" />
         </TransparentButton>
       </ContactButtonsContainer>
-         
-      <Anchorage href={cvPath} download>
-        {language === 'es' ? 'Descargar CV' : 'Download CV'}
-      </Anchorage>
 
       <FooterBottom>
         <p>{texts.footer}</p>
